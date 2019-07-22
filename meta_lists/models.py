@@ -1,3 +1,13 @@
-from django.db import models
+from edc_list_data.model_mixins import ListModelMixin
 
-# Create your models here.
+
+class Symptoms(ListModelMixin):
+    pass
+
+
+class ArvRegimens(ListModelMixin):
+    pass
+
+
+class OffstudyReasons(ListModelMixin):
+    pass
