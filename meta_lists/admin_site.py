@@ -9,3 +9,4 @@ class AdminSite(DjangoAdminSite):
 
 
 meta_lists_admin = AdminSite(name="meta_lists_admin")
+meta_lists_admin.disable_action("delete_selected")
