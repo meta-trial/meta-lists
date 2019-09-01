@@ -1,0 +1,4 @@
+[run]
+include = meta_lists/*
+omit = meta_lists/tests/*,meta_lists/migrations/*
+branch = 1

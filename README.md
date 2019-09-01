@@ -1,2 +1,0 @@
-# meta-lists
-List models
