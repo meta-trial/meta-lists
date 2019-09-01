@@ -1,7 +1,7 @@
 |pypi| |travis| |coverage|
 
-Meta List Models
---------------------
+META List Models
+----------------
 
 List models for the Meta trial
 
