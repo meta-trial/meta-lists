@@ -32,7 +32,10 @@ setup(
     zip_safe=False,
     keywords='django meta list models',
     install_requires=[
-        'edc_list-data',
+        'edc-list-data',
+        'edc-constants',
+        'edc-sites',
+        'meta-prn',
     ],
     classifiers=[
         'Environment :: Web Environment',

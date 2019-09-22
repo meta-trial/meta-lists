@@ -1,5 +1,5 @@
 from django.conf import settings
-from edc_constants.constants import OTHER, NOT_APPLICABLE, UNKNOWN, DEAD
+from edc_constants.constants import OTHER, UNKNOWN, DEAD
 from edc_list_data import PreloadData
 from meta_prn.constants import WITHDRAWAL, TRANSFERRED, LATE_EXCLUSION
 
@@ -39,13 +39,25 @@ list_data = {
         (OTHER, "Other, specify"),
     ],
     "meta_lists.offstudyreasons": [
-        ("completed_48_wks", "Patient completed 48 weeks of follow-up"),
+        ("completed_followup", "Patient completed 12 months of follow-up"),
+        ("clinical_endpoint", "Patient reached a clinical endpoint"),
+        ("toxicity", "Patient experienced an unacceptable toxicity"),
+        (
+            "intercurrent_illness",
+            "Intercurrent illness which prevents further treatment",
+        ),
         ("lost_to_followup", "Patient lost to follow-up"),
         (DEAD, "Patient reported/known to have died"),
         (WITHDRAWAL, "Patient withdrew consent to participate further"),
         (LATE_EXCLUSION, "Patient fulfilled late exclusion criteria*"),
         (TRANSFERRED, "Patient has been transferred to another health centre"),
-        (OTHER, "Other, specify"),
+        (
+            OTHER,
+            (
+                "Other condition that justifies the discontinuation of "
+                "treatment in the clinician’s opinion (specify below)"
+            ),
+        ),
     ],
 }
 
