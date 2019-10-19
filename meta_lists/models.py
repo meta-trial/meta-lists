@@ -11,3 +11,15 @@ class ArvRegimens(ListModelMixin):
 
 class OffstudyReasons(ListModelMixin):
     pass
+
+
+class OiProphylaxis(ListModelMixin):
+    pass
+
+
+class BaselineSymptoms(ListModelMixin):
+    pass
+
+
+class DiabetesSymptoms(ListModelMixin):
+    pass

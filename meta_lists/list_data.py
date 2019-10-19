@@ -1,10 +1,22 @@
 from django.conf import settings
-from edc_constants.constants import OTHER, UNKNOWN, DEAD
+from edc_constants.constants import OTHER, UNKNOWN, DEAD, NONE
 from edc_list_data import PreloadData
 from meta_prn.constants import WITHDRAWAL, TRANSFERRED, LATE_EXCLUSION
 
 
 list_data = {
+    "meta_lists.diabetessymptoms": [
+        ("frequent_urination", "Wanting to urinate more often than usual"),
+        ("excessive_thirst", "Wanting to drink water more than usual"),
+        ("excessive_eating", "Wanting to eat food more than usual"),
+        (NONE, "No symptoms to report"),
+    ],
+    "meta_lists.oiprophylaxis": [
+        ("tmp_smx", "TMP/SMX"),
+        ("fluconazole", "Fluconazole"),
+        ("isoniazid", "Isoniazid"),
+        (OTHER, "Other, specify"),
+    ],
     "meta_lists.symptoms": [
         ("nausea", "Nausea"),
         ("vomiting", "Vomiting"),
@@ -23,6 +35,27 @@ list_data = {
         ("pounding_heartbeat", "Fast or pounding heartbeat"),
         ("shallow_breathing", "Fast or shallow breathing"),
         ("unusual_sleepiness", "Unusual sleepiness"),
+        (NONE, "No symptoms to report"),
+        (OTHER, "Other, specify"),
+    ],
+    "meta_lists.baselinesymptoms": [
+        ("loss_of_weight", "Loss of weight"),
+        ("skin_infection", "Skin infection"),
+        ("sweating", "Sweating"),
+        ("vomiting", "Vomiting"),
+        ("headaches", "Headaches"),
+        ("shakiness", "Shakiness"),
+        ("dizziness", "Dizziness"),
+        ("unusual_sleepiness", "Unusual sleepiness"),
+        ("shallow_breathing", "Fast or shallow breathing"),
+        ("muscle_cramping", "Muscle cramping"),
+        ("weakness", "Weakness"),
+        ("fatigue", "Fatigue"),
+        ("cough", "Cough"),
+        ("loss_of_appetite", "Loss of appetite"),
+        ("diarrhoea", "Diarrhoea"),
+        ("abdominal_pain_general", "Abdominal pain (General)"),
+        (NONE, "No symptoms to report"),
         (OTHER, "Other, specify"),
     ],
     "meta_lists.arvregimens": [
