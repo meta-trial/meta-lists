@@ -23,3 +23,11 @@ class BaselineSymptoms(ListModelMixin):
 
 class DiabetesSymptoms(ListModelMixin):
     pass
+
+
+class HypertensionMedications(ListModelMixin):
+    pass
+
+
+class NonAdherenceReasons(ListModelMixin):
+    pass

@@ -3,12 +3,13 @@ from edc_list_data.admin import ListModelAdminMixin
 
 from .admin_site import meta_lists_admin
 from .models import (
-    Symptoms,
     ArvRegimens,
-    OffstudyReasons,
-    OiProphylaxis,
     BaselineSymptoms,
     DiabetesSymptoms,
+    NonAdherenceReasons,
+    OffstudyReasons,
+    OiProphylaxis,
+    Symptoms,
 )
 
 
@@ -39,4 +40,9 @@ class BaselineSymptomsAdmin(ListModelAdminMixin, admin.ModelAdmin):
 
 @admin.register(DiabetesSymptoms, site=meta_lists_admin)
 class DiabetesSymptomsAdmin(ListModelAdminMixin, admin.ModelAdmin):
+    pass
+
+
+@admin.register(NonAdherenceReasons, site=meta_lists_admin)
+class NonAdherenceReasonsAdmin(ListModelAdminMixin, admin.ModelAdmin):
     pass
