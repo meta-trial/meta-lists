@@ -1,7 +1,12 @@
 from django.conf import settings
 from edc_constants.constants import OTHER, UNKNOWN, DEAD, NONE
 from edc_list_data import PreloadData
-from meta_prn.constants import WITHDRAWAL, TRANSFERRED, LATE_EXCLUSION
+from meta_prn.constants import (
+    WITHDRAWAL,
+    TRANSFERRED,
+    LATE_EXCLUSION,
+    OTHER_RX_DISCONTINUATION,
+)
 
 
 list_data = {
@@ -120,12 +125,11 @@ list_data = {
         (LATE_EXCLUSION, "Patient fulfilled late exclusion criteria*"),
         (TRANSFERRED, "Patient has been transferred to another health centre"),
         (
-            OTHER,
-            (
-                "Other condition that justifies the discontinuation of "
-                "treatment in the clinician’s opinion (specify below)"
-            ),
+            OTHER_RX_DISCONTINUATION,
+            "Other condition that justifies the discontinuation of "
+            "treatment in the clinician’s opinion (specify below)",
         ),
+        (OTHER, ("Other reason (specify below)"),),
     ],
 }
 
